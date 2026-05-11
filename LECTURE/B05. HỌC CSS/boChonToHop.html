@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ chọn tổ hợp</title>
+</head>
+<body>
+    <p>Nội dung 0</p>
+    <div>
+        <p>Nội dung 1</p>
+        <p>Nội dung 2</p>
+    
+    <!-- <h2>Nội dung thẻ h2</h2> -->
+     <section>
+        <p>Nội dung 3</p>
+        <p>Nội dung 4</p>
+     </section>
+
+    </div>
+</body>
+</html>
+
+
+<style>
+    div + p {    /* Css CHỈ CSS ĐC CHO 1  thẻ p ngay sau thẻ div CUÙNG CẤP  sẽ css */
+        background-color: yellow;
+    }
+
+    div + h2 { /* K css đc vì ngay sau div k có thẻ h2 */
+        background-color: brown;
+    }
+
+    div ~ p { /* Css CHỈ CSS ĐC CHO NHIỀU  thẻ p ngay sau thẻ div CUÙNG CẤP  sẽ css */
+        background-color: yellow;
+    }
+    
+
+    /* TÌM TẤT CẢ CÁC THẺ CON CỦA DIV */
+    div > p {   /* Lấy phần tử con ĐẦU TIÊN để css */
+        background-color: blue;
+    }
+
+    /* LẤY HẾT TẤT CẢ P NẰM TRONG DIV */
+    div p {
+        background-color: aquamarine;
+    }
+</style>

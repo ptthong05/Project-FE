@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cacThe.css">
+</head>
+<body>
+    <ul>
+        <li>Mục 1</li>
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+        <li>Mục 4</li>
+        <li>Mục 5</li>
+    </ul>
+
+    <table>
+        <tr>
+            <th>Hàng 1 Cột 1</th>
+            <th>Hàng 1 Cột 2</th>
+            <th>Hàng 1 Cột 3</th>
+        </tr>
+        <tr>
+            <td>Hàng 1 Cột 2</td>
+            <td>Hàng 2 Cột 2</td>
+            <td>Hàng 2 Cột 3</td>
+        </tr>
+        <tr>
+            <td>Hàng 3 Cột 1</td>
+            <td>Hàng 3 Cột 2</td>
+            <td>Hàng 3 Cột 3</td>
+        </tr>
+    </table>
+
+    <p>Những thách thức đó cũng đặt ra yêu cầu <span class="inline">Thẻ inline 1</span>cấp bách đối với Việt Nam trong việc tăng cường quản lý tài nguyên nước, nâng cao năng lực dự báo khí tượng thủy văn, chủ động ứng phó với thiên tai và biến đổi khí hậu, <span class="inline">Thẻ inline 2</span>bảo vệ môi trường và thúc đẩy phát triển kinh tế theo hướng xanh và bền vững.</p>
+    <p>Năm 2026, Ngày Nước thế giới với chủ đề "Nước và Bình đẳng giới" <span class="block">Thẻ block 1</span> nhấn mạnh tầm quan trọng của tài nguyên nước đối với sự ổn định, thịnh vượng của nền kinh tế, <span class="block">Thẻ block 2</span> đồng thời, khẳng định vai trò của phụ nữ và trẻ em trong quản trị và bảo vệ nguồn nước. Ngày Khí tượng thế giới với thông điệp "Quan trắc hôm nay, Bảo vệ ngày mai" đề cao vai trò của khoa học, công nghệ và hệ thống quan trắc trong phát triển kinh tế, phòng chống thiên tai, bảo vệ cuộc sống và tài sản của người dân.</p>
+    <p>Thứ trưởng Lê Công Thành nhấn mạnh 3 nhiệm vụ trọng tâm: hoàn thiện cơ sở dữ liệu và ứng dụng công nghệ trong quản lý tài nguyên, gắn với thích ứng biến đổi khí hậu; nâng cao nhận thức xã hội về tiết kiệm năng lượng, bảo vệ tài nguyên nước, môi trường; đồng thời thúc đẩy doanh nghiệp đổi mới công nghệ, <span class="inline-block">Thẻ inline-block 1</span> phát triển kinh tế carbon thấp và khuyến khích người dân hành động <span class="inline-block">Thẻ inline-block 2</span> vì tương lai xanh.</p>
+    <p class="none">Chiến dịch Giờ Trái đất 2026 với chủ đề "Sáng tạo xanh – Tương lai xanh" kêu gọi cộng đồng chung tay sử dụng năng lượng tiết kiệm, thúc đẩy chuyển dịch năng lượng và phát triển kinh tế xanh, góp phần xây dựng một tương lai xanh và bền vững cho các thế hệ mai sau.</p>
+
+    <div>
+        <pre>
+            ul
+                list-style-type: disc; // Hình tròn đen. Mặc định.
+                list-style-type: circle; // Hình tròn có viền đen và trống bên trong.
+                list-style-type: square; // Hình vuông
+                list-style-type: disclosure-closed; // Hình tam giác trỏ sang phải
+                list-style-type: none; // Bị ẩn
+                list-style-type: upper-roman; // Chữ la mã I, II, III
+                list-style-type: lower-alpha; // Chữ cái a, b, c
+
+                list-style-position: outside; // Các điểm đánh dấu nằm bên ngoài
+                list-style-position: inside; // Các điểm đánh dấu nằm bên trong
+        </pre>
+
+        <pre>
+            Display
+                display: inline; (không đặt được chiều rộng và chiều cao, không thêm được margin và padding cho bên trên và bên dưới)
+                display: block; (Chiều rộng kéo dài từ trái sang phải, luôn bắt đầu ở một hàng mới. Cho phép đặt chiều rộng và chiều cao, cho phép đặt margin, padding cho bên trên và bên dưới)
+                display: inline-block; (Chiều rộng mặc định bằng chiều rộng của element, không bắt đầu ở một hàng mới. Cho phép đặt chiều rộng và chiều cao, cho phép đặt margin, padding cho bên trên và bên dưới)
+                display: none; (Ẩn đi hoàn toàn)
+                    visibility: hidden; // Ẩn nhưng vẫn chiếm một khoảng trống
+                    visibility: visible; // Hiển thị. mặc định.
+        </pre>
+
+        <pre>
+            Position
+                Thuộc tính position để xác định vị trí element muốn hiển thị. Có 5 giá trị khác nhau
+                position: static; // Vị trí ở trạng thái mặc định của phần tử (tức là các thuộc tính top, bottom, right, left không có hiệu lực)
+                position: relative; // Vị trí tương đối so với vị trí mặc định và áp dụng được các thuộc tính top, right, bottom, left.
+                position: absolute; // Vị trí tuyệt đối cho các thành phần theo thành phần bao ngoài hoặc cửa sổ trình duyệt.
+                position: fixed; // Được định vị so với khung nhìn (viewport), có nghĩa là nó luôn ở một vị trí cố định ngay cả khi trang được cuộn. Các thuộc tính top, right, bottom và left được sử dụng để định vị element.
+                position: sticky; // Có thể hiểu đơn giản là sự kết hợp của position: relative và position: fixed. Nó cũng na ná relative nhưng mà khi các bạn scroll đến vị trí của nó sẽ giống hệt như fixed và khi các bạn scroll lên ra khỏi nó thì nó sẽ quay lại vị trí ban đầu dưới dạng relative.
+        </pre>
+
+        <pre>
+            Z-index: Khi kéo element thì box duưới đè lên box trên (HTML) ==> Dùng z-index để k đè lên header
+                Thuộc tính z-index thiết lập thứ tự xếp chồng nhau của một thành phần vị trí.
+                Giá trị mặc định là 0.
+                z-index càng cao thì element đó càng nằm trên.
+        </pre>
+
+        <pre>
+            Overflow (Tràn ra)
+                overflow: visible; // Khi chiều cao của box không đủ chứa text, thì text vẫn hiển thị tràn qua box, đây là mặc định.
+                overflow: hidden; // Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được ẩn đi.
+                overflow: scroll; // Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được ẩn đi và xuất hiện thanh scroll, khi cuộn sẽ hiển thị text. Khi sử dụng thành phần này sẽ xuất hiện cả thanh scroll ngang và dọc.
+                overflow: auto; // Khi chiều cao của box không đủ chứa text, thì thanh scroll sẽ tự động hiển thị. Khi sử dụng thành phần này sẽ xuất hiện thanh scroll dọc.
+        </pre>
+
+        <pre>
+            Combinator selectors (Bộ chọn tổ hợp)
+                Adjacent sibling selectors (Bộ chọn anh chị em liền kề)
+                    tag1+tag2 { CSS }
+                General sibling selectors (Bộ chọn anh chị em chung)
+                    tag01 ~ tag02 { /*Viết css trong này*/ }
+                Child selectors (Bộ chọn con)
+                    tag01 > tag02 { /*Viết css trong này*/ }
+                Descendant selectors (Bộ chọn hậu duệ)
+                    tag01 tag02 { /*Viết css trong này*/ }
+        </pre>
+
+        <pre>
+            Pseudo-class selectors (Bộ chọn lớp giả)
+                selector:pseudo-class {}
+                Một số pseudo-class phổ biến:
+                    :link: khi liên kết chưa được truy cập lần nào. (Chỉ dùng cho thẻ a)
+                    :visited: khi liên kết đã được truy cập sau lần đầu tiên. (Chỉ dùng cho thẻ a)
+                    :hover: khi di chuyển chuột lên element.
+                    :active: khi phần tử được click vào, áp dụng cho tất cả các thẻ.
+                    :first-child: thiết lập thuộc tính cho element đầu tiên.
+                    :last-child: thiết lập thuộc tính cho element cuối cùng.
+                    :nth-child(n): n có thể là các giá trị even (chẵn), odd (lẻ), một số, một biểu thức (an + b).
+        </pre>
+
+        <pre>
+            Pseudo-elements selectors (Bộ chọn phần tử giả)
+                selector::pseudo-element {}
+                Danh sách pseudo-element:
+                    ::before: Chèn nội dung nào đó trước nội dung của mỗi element. (Phải thêm content: "";)
+                    ::after: Chèn nội dung nào đó sau nội dung của mỗi element. (Phải thêm content: "";)
+                    ::first-letter: Chọn chữ cái đầu tiên của mỗi element.
+                    ::first-line: Chọn dòng đầu tiên của mỗi element.
+                    ::marker: Chọn các điểm đánh dấu của các mục danh sách (thẻ <ul> và <ol>)
+                    ::selection: Được dùng để style cho một vùng văn bản được người dùng chọn (hay còn gọi là "bôi đen"). Chỉ có một số thuộc tính css khả dụng với ::selection là color, background, cursor, và outline.
+        </pre>
+
+        <pre>
+            Opacity (Độ mờ): opacity có thể nhận giá trị từ 0 đến 1
+                opacity: 0.6; // Element sẽ mờ đi 40%
+        </pre>
+    </div>
+</body>
+</html>

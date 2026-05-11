@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cau lenh</title>
+</head>
+<body>
+    <pre style="font-size: 25px;">
+        Các thuật ngữ:
+            - Repository: Kho lưu trữ mã nguồn, nơi chứa tất cả các tệp và lịch sử thay đổi của dự án.
+            - Working Directory: Thư mục làm việc, nơi bạn thực hiện các thay đổi trên mã nguồn.      
+            - Staging Area: Khu vực tạm thời, nơi bạn chuẩn bị các thay đổi trước khi commit chúng vào repository.
+
+        Các câu lệnh GIT sử dụng phổ biến
+            git --version: Xem phiên bản hiện tại đang được cài trên máy tính.
+
+            git --help: Xem danh sách các câu lệnh Git.
+
+            git config: Để đặt username và email của bạn trong file config của git.
+                Để xem thông tin cấu hình username: git config --global user.name  -- Để đặt username mới: git config --global user.name "Pham Tan Thong"
+                Để xem thông tin cấu hình email: git config --global user.email
+                Để đặt email mới: git config --global user.email "namdp.1999@gmail.com"
+
+            git init: Khởi tạo 1 git repository (kho lưu trữ) trong một dự án mới hoặc dự án đã có (Dùng trong thư mục gốc của dự án).
+                Khi khởi tạo xong, trong thư mục gốc (dự án đang làm) sẽ sinh ra một thư mục tên là .git, thư mục này sẽ lưu toàn bộ thông tin lịch sử của dự án mà bạn làm. Chúng ta không cần quan tâm bên trong thư mục này chứa gì.
+            
+            git status: Để xem trạng thái của những file đã được thay đổi (bao gồm: thêm, sửa, xóa) trong dự án.
+            
+            git add ten_file
+                Thông tin của các file sẽ được lưu vào Staging area.
+                Staging area có tác dụng sắp xếp lại nhưng file đã add vào.
+            
+            git add . : Thêm thay đổi cho tất cả các file.
+
+            git commit -m "Nội dung…"
+
+            git log: Giúp bạn xem lại thông tin lịch sự commit, nhằm giám sát sự thay đổi của dự án. Commit mới sẽ hiện bên trên, commit cũ sẽ hiện bên dưới (Nếu gặp chữ END thì nhấn phím q để thoát).
+            
+            git show commit_id: Dùng để xem chi tiết một commit
+            
+            git diff: Xem sự thay đổi của một file sau khi chúng ta chỉnh sửa (File đó vẫn đang ở khu vực Working directory).
+            
+            gitk: Mở dashboard xem trực quan hơn.
+            
+            git checkout -- ten_file: Bỏ đi những thay đổi của file, để file đó trở về như lúc ban đầu. Áp dụng cho file đang ở vùng Working directory.
+            
+            git reset HEAD ten_file hoặc git reset ten_file: Chuyển file đó từ vùng Staging area trở lại vùng Working directory.
+            
+            git reset --soft commit_id
+                Dùng để chuyển từ trạng thái đã commit về trạng thái trước lúc chạy lệnh git commit.
+                Tức là từ Repository về lại Staging area. Trong đó commit_id là mã của nhánh mà ta muốn quay lại.
+            
+            git reset --mixed commit_id
+                Dùng để chuyển từ trạng thái đã commit về trạng thái trước lúc chạy lệnh git add.
+                Tức là từ Repository về lại Working directory. Trong đó commit_id là mã của nhánh mà ta muốn quay lại.
+            
+            git branch: Xem danh sách các nhánh. Các branch (nhánh) đại diện cho các phiên bản cụ thể của một kho lưu trữ tách ra từ project chính của bạn.
+                Nhánh master là nhánh chính, để sau này deploy lên server.
+            
+            git checkout -b ten_nhanh: Tạo một nhánh mới và chuyển sang nhánh đó.
+            
+            git checkout ten_nhanh: Chuyển sang nhánh khác.
+
+            git merge ten_nhanh: Để merge nhánh <ten_nhanh> vào trong nhánh hiện tại.
+                Ví dụ: Ta có 2 nhánh A và B, để hợp nhất nhánh B vào trong nhánh A ta làm như sau: Dùng lệnh git checkout A để chuyển sang nhánh A, sau đó chạy lệnh git merge B để hợp nhất nhánh B vào nhánh A.
+
+            git branch -D ten_nhanh: Để xóa nhánh.
+    </pre>
+
+
+    <pre style="font-size: 25px;">
+        Đẩy code lần đầu lên GITHUB khi project đã có GIT
+            Bước 1: git remote add origin url_github_https
+            Bước 2: git branch -M main
+            Bước 3: git push -u origin main
+            
+        Đẩy code lần đầu lên GITHUB khi project chưa có GIT
+            Bước 1: git init
+            Bước 2: git add .
+            Bước 3: git commit -m "Nội dung commit"
+            Bước 4: git branch -M main
+            Bước 5: git remote add origin url_github_https
+            Bước 6: git push -u origin main
+
+        Đẩy code lên GITHUB cho các lần tiếp theo
+            Bước 1: git add .
+            Bước 2: git commit -m "Nội dung commit"
+            Bước 3: git push
+    </pre>
+</body>
+</html>
+
+<style>
+    pre {
+        white-space: pre-wrap;   /* Cho phép ngắt dòng */
+        word-wrap: break-word;   /* Ngắt từ khi cần */
+    }
+</style>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baiTap</title>
+</head>
+<body>
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Họ và tên</th>
+                    <th>SĐT</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Lê văn A</td>
+                    <td>000000000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Nguyễn B</td>
+                    <td>004399488</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Level1</th>
+                    <th>Level2</th>
+                    <th>Level3</th>
+                    <th>Info</th>
+                    <th>Name</th>
+                </tr>
+
+                <tbody>
+                    <tr>
+                        <td rowspan="6"></td>  <!-- rowspan chiếm 6 hàng -->
+                        <td  rowspan="4"></td>
+                        <td rowspan="3"></td>
+                        <td>App Test</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                     
+                
+                 
+                        <td>App memory</td>
+                        <td>foo</td>
+                    </tr>
+                    <tr>
+                      
+                   
+                        
+                        <td>App test</td>
+                        <td>bar</td>
+                    </tr>
+                    <tr>
+                      
+                       
+                        <th></th>
+                        <th>Ap test</th>
+                        <th>bar</th>
+                    </tr>
+                    <tr>
+                     
+                        <th rowspan="2"></th>
+                        <th rowspan="2"></th>
+                        <th>Memory Func</th>
+                        <th>foo</th>
+                    </tr>
+                    <tr>
+                       
+                     
+                  
+                        <th>App Test</th>
+                        <th>foo</th>
+                    </tr>
+                </tbody>
+            </thead>
+        </table>
+
+        <table>
+            <tr>
+                <td rowspan="11">TCB</td>
+                <td>Order no:</td>
+                <td colspan="3">#ABC001</td>
+            </tr>
+            <tr>
+                <td>Order Date:</td>
+                <td colspan="3">23-March-2016</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="section">Customer</td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td colspan="3">Ptt</td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td colspan="3">HCM</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="section">Order Detail</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Milk</td>
+                <td>Book</td>
+                <td>50VNĐ</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Sugar</td>
+                <td>Order</td>
+                <td>60VNĐ</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Cushion</td>
+                <td>Order</td>
+                <td>150VNĐ</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Sofa</td>
+                <td>Book</td>
+                <td>1790VNĐ</td>
+            </tr>       
+            <tr>
+                <td colspan="3" class="right">Total:</td>
+                <td>650VNĐ</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+    .section {
+        text-align: center;
+    }
+    .right {
+        text-align: right;
+    }
+</style>

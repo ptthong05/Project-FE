@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boChonLopGia</title>
+</head>
+<body>
+    <a href="https://www.google.com/?hl=vi" target="_blank">Đây là trang google</a>
+    <p>Đây là thẻ p</p>
+
+    <ul>
+        <li>Mục 1</li>
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+        <li>Mục 4</li>
+        <li>Mục 5</li>
+        <li>Mục 6</li>
+    </ul>
+</body>
+</html>
+
+<style>
+    /* Khi chưa click vào link thì hiển thị màu dưới */
+    a:link {
+        color: red;
+        text-decoration: none;
+    }
+    /* Khi click vào link rồi sau khi load lại sẽ đổi thành màu duới */
+    a:visited {
+        color: blueviolet;
+    }
+    /* khi hover vào element sẽ đổi sang màu dưới */
+    p:hover {
+        color: cadetblue;
+    }
+    /* khi click vào sẽ hiện background */
+    p:active {
+        background-color: aqua;
+    }
+
+    /* CSS cho element đầu tiên */
+    ul li:first-child {
+        color: red;
+    }
+
+    ul li:last-child {
+        list-style: none;
+    }
+    /* Chọn NHIÊỀU ELEMENT ĐỂ CSS */   /* VD 2n + 2 = 2*0+2 = 2 ==> CSS thẻ li 2 tăng lên N = 1 => =4 chọn thẻ li 4 cứ thế tăng dần */
+    ul li:nth-child(2n+2) {
+        background-color: rgb(50, 135, 131);
+    }
+
+</style>

@@ -1,0 +1,63 @@
+body::selection {
+    color: red;
+    background-color: yellow;
+}
+
+
+ul {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+table {
+    border-collapse: collapse;      /* Hợp nhất 2 đường viền thành 1 đường  */
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    background-color: orange;
+    color: white;
+}
+
+.inline, .block, .inline-block {
+    border: 2px solid yellow;
+    background-color: orange;
+}
+
+.inline {
+    margin-left: 50px;
+    margin-right: 70px;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+.block {
+    /* Biến thành block luôn bắt đầu trên dòng mới */
+    display: block;
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px
+}
+
+.inline-block {
+    /* Chiều rộng bằng chiều rộng element */
+    display: inline-block;
+    width: 300px;
+    height: 100px;
+    padding-top: 30px;  
+}
+
+.none {
+    color: red;
+    display: none;
+    visibility: hidden;
+}
+

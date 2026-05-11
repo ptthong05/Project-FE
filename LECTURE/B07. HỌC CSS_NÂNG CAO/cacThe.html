@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cacThe</title>
+</head>
+<body>
+    <div>
+        <pre>
+            Flexbox
+                Flexbox có 2 thành phần là:
+                    container: là phần tử cha dùng để bọc bên ngoài.
+                    item: là phần tử con của container.
+                Các thuộc tính của Flex
+                    display flex
+                            flex: cho các box con thẳng hàng. CHIỀU RỘNG CONTAINER (BOX CHA) = WIDTH = 100% 
+                            inline-flex: cho các box con thẳng hàng. CHIỀU RỘNG CONTAINER (BOX CHA) = ITEM BÊN TRONG (CON) 
+
+                    flex-direction
+                        Xác định hướng của main-axis để container sắp xếp lại các item.
+                            flex-direction: row; : sắp xếp các item theo chiều dòng (từ trái sang phải).
+                            flex-direction: row-reverse; : sắp xếp các item theo chiều ngược lại của dòng (từ phải sang trái).
+                            flex-direction: column; : sắp xếp các item theo chiều cột (trên xuống dưới).
+                            flex-direction: column-reverse; : sắp xếp các item theo chiều ngược lại của cột (từ dưới lên trên).
+
+                    flex-wrap
+                        Thuộc tính flex-wrap cho phép item có tự động xuống dòng hay không khi kích thước container thay đổi.
+                            flex-wrap: nowrap; : tất cả item sẽ nằm trên một dòng (mặc định).
+                            flex-wrap: wrap; : item sẽ tự động xuống dòng khi không đủ chỗ.
+                            flex-wrap: wrap-reverse; : item sẽ tự động xuống dòng nhưng NẰM TRÊN -- ngược lại với wrap (dòng mới sẽ nằm dưới dòng cũ).
+
+                    justify-content - Căn ngang theo main-axis (NGANG)
+                        Thuộc tính justify-content để điều chỉnh vị trí bắt đầu và căn chỉnh các item theo trục main-axis.
+                            justify-content: flex-start; : căn chỉnh các item về phía đầu main-axis (mặc định).
+                            justify-content: flex-end; : căn chỉnh các item về phía cuối main-axis.
+                            justify-content: center; : căn chỉnh các item về giữa main-axis.
+                            justify-content: space-between; : phân phối đều các item, khoảng cách giữa chúng bằng nhau, nhưng không có khoảng cách ở đầu và cuối.
+                            justify-content: space-around; : phân phối đều các item, khoảng cách giữa chúng bằng nhau, nhưng có khoảng cách ở đầu và cuối. -- Khoảng cách giữa item và lề = 1/2 khoảng cách giữa item và item.
+                            space-evenly: Tương tự space-between, nhưng khác ở chỗ: Khoảng cách giữa item và lề = khoảng cách giữa item và item.
+
+                    align-items - Căn dọc theo cross-axis (DỌC)
+                        Thuộc tính align-items sử dụng để điều chỉnh vị trí bắt đầu và căn chỉnh các item theo trục cross-axis.
+                        Dùng để căn chỉnh cho một dòng.
+                            align-items: stretch; : kéo dài các item để chúng có cùng chiều cao (mặc định).
+                            align-items: flex-start; : căn chỉnh các item về phía đầu cross-axis.
+                            align-items: flex-end; : căn chỉnh các item về phía cuối cross-axis.
+                            align-items: center; : căn chỉnh các item về giữa cross-axis.
+                            align-items: baseline; : căn chỉnh các item theo đường cơ sở của chúng.
+
+                    align-content - Căn dọc theo cross-axis khi có nhiều dòng
+                        Thuộc tính align-content sử dụng để điều chỉnh vị trí bắt đầu và căn chỉnh các dòng theo trục cross-axis.
+                            align-content: stretch; : kéo dài các dòng để chúng có cùng chiều cao (mặc định).
+                            align-content: flex-start; : căn chỉnh các dòng về phía đầu cross-axis.
+                            align-content: flex-end; : căn chỉnh các dòng về phía cuối cross-axis.
+                            align-content: center; : căn chỉnh các dòng về giữa cross-axis.
+                            align-content: space-between; : phân phối đều các dòng, khoảng cách giữa chúng bằng nhau, nhưng không có khoảng cách ở đầu và cuối.
+                            align-content: space-around; : phân phối đều các dòng, khoảng cách giữa chúng bằng nhau, nhưng có khoảng cách ở đầu và cuối.
+                            align-content: space-evenly; : Tương tự space-between, nhưng khác ở chỗ: Khoảng cách giữa dòng và lề = khoảng cách giữa dòng và dòng.
+
+                    align-self - ÁP DỤNG 1 ITEM NÀO ĐÓ
+                        Thuộc tính align-self cho phép một item cụ thể có thể được căn chỉnh khác với các item còn lại trong cùng một container.
+                        Dùng để căn chỉnh cho một item.
+                            align-self: auto; : kế thừa giá trị của align-items từ container (mặc định).
+                            align-self: stretch; : kéo dài item để có cùng chiều cao với các item khác.
+                            align-self: flex-start; : căn chỉnh item về phía đầu cross-axis.
+                            align-self: flex-end; : căn chỉnh item về phía cuối cross-axis.
+                            align-self: center; : căn chỉnh item về giữa cross-axis.
+
+                    order - SẮP XẾP LẠI THỨ TỰ HIỂN THỊ CỦA ITEM
+                        Thuộc tính order cho phép bạn thay đổi thứ tự hiển thị của các item trong container mà không cần thay đổi thứ tự trong mã HTML.
+                        Mặc định, tất cả các item có giá trị order là 0. Bạn có thể gán giá trị dương hoặc âm để thay đổi thứ tự hiển thị của chúng.
+                            Item có giá trị order thấp hơn sẽ được hiển thị trước (ở vị trí gần đầu main-axis hơn).
+                            Item có giá trị order cao hơn sẽ được hiển thị sau (ở vị trí gần cuối main-axis hơn).
+        </pre>
+    </div>
+</body>
+</html>

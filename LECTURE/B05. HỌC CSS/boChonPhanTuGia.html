@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boChonPhanTuGia</title>
+</head>
+<body>
+    <div class="box">
+        <span>Thẻ span</span>
+        Thẻ div
+    </div>
+
+    <p>Nội dung 01</p>
+    <h2>Thẻ h2</h2>
+    <h5>Thẻ h5</h5>
+
+        <ul>
+        <li>Mục 1</li>
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+        <li>Mục 4</li>
+        <li>Mục 5</li>
+        <li>Mục 6</li>
+    </ul>
+
+    <p class="text">gbbdzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</p>
+</body>
+</html>
+
+<style>
+    span {
+        background-color: orange;
+    }
+    /* Chèn nội dung trước p */
+    p::before {
+        content: " Nội dung trước ";
+    }
+    /* Chèn nội dung sau p */
+    p::after {
+        content: " Nội dung sau ";
+    }
+    /* CSS cho CHỮ CÁI ĐẦU */
+    h2::first-letter {
+        font-size: 50px;
+    }
+    /* CSS cho DÒNG */
+    h5::first-line {
+        text-transform: uppercase;
+    }
+    /* CSS các mục dấu đầu của thẻ LI */
+    ul li::marker {
+        color: red;
+    }
+    /* Khi chọn để (COPY) thì áp dụng css dưới */
+    p.text::selection {
+        background-color: red;
+        color: yellow;
+    }
+</style>

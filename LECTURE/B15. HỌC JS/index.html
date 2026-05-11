@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>          
+    <pre style="font-size: 30px;">
+        1. Variables
+            Cú pháp: var tenBien = giaTri;
+            
+        2. Operators
+            Arithmetic (Toán tử số học): + - * /  **  % ++ --
+            Assignment (Toán tử gán): =  +=  -  -=  *=  /=  %=
+            Comparison (Toán tử so sánh) > < >= <=          -- TRẢ VỀ T OR F
+                                        ==(K nghiêm ngoặc - a và b CÓ THỂ KHÁC datatype)  ===(Nghiêm ngoặc - a và b cùng datatype)   !=   !==
+            Logical (Toán tử logic)      && ( T && T ==> T)                 ||  ( T || F ==> T         T || T ==> T)             !
+
+        3. Data Types (Kiểu dữ liệu) 
+            Kiểu dữ liệu nguyên thủy là kiểu dữ liệu mà giá trị không thể thay đổi được.
+                                        Có 6 kiểu: Number, String, Boolean, Undefined -- KHAI BÁO K GÁN GIÁ TRỊ VD VAR a , Null -- CÓ 1 GIÁ TRỊ TÊN NULL VD VAR A = NULL,  Symbol
+            Dữ liệu phức tạp (Complex Data) 
+                Kiểu Function
+                    Function (hàm) trong JavaScript là một chương trình con giúp thực thi một công việc cụ thể.
+                    Cú pháp:
+                        function tenHam(thamSo1, thamSo2,…) {
+                            // Code
+                        } 
+                    
+
+                Kiểu Object
+                    Object là kiểu dữ liệu tham chiếu. Có thể hiểu object là một tập hợp gồm các cặp key - value (khóa - giá trị).
+                    Kiểu dữ liệu của key có thể là string hoặc symbol.
+                    Value ứng với key có thể là bất kỳ kiểu dữ liệu nào.
+                    Có 2 loại là Object và Array.
+                    Cú pháp Object:
+                        var tenHam = {
+                            key = value,
+                        }
+                    Cú pháp Array:
+                        var tenHam = [
+                            key,
+                        ]  
+                       
+                        
+        4. Hàm built-in: được javascript định nghĩa sẵn, chúng ra chỉ việc sử dụng.
+            Hàm alert()
+                Hàm alert() có nhiệm vụ in một thông báo popup
+
+            Hàm confirm()
+                Hàm confirm() cũng sẽ xuất hiện một thông báo popup nhưng nó có thêm hai sự lựa chọn là Yes và No.
+                Nếu người dùng chọn Yes thì nó trả về TRUE và ngược lại nếu chọn NO thì nó sẽ trả về FALSE.
+
+            Hàm prompt()
+                Hàm prompt() dùng để lấy thông tin từ người dùng
+                Gồm có hai tham số truyền vào là nội dung thông báo và giá trị ban đầu.
+                Cú pháp: prompt(title, defaultValue);
+                Trong đó:
+                    title: nội dung chữ hiển thị tới người dùng.
+                    defaultValue: giá trị mặc định cho ô nhập và đây là giá trị không bắt buộc.
+
+            Hàm console
+                Dùng để in ra nội dung ở tab console trên dev tools.
+                Có 3 hàm hay sử dụng là: -- THAY BACKGROUND
+                    console.log(): in ra thông báo
+                    console.warn(): in ra cảnh báo
+                    console.error(): in ra lỗi
+
+            Hàm setTimeout
+                Code sẽ chạy 1 lần duy nhất sau một khoảng thời gian.
+                Cú pháp:
+                    setTimeout(function() {
+                        // Code
+                    }, time)
+
+            Hàm setInterval
+                Code sẽ chạy LẶP LẠI sau một khoảng thời gian.
+                Cú pháp:
+                    setInterval(function() {
+                        // Code
+                    }, time)
+
+
+        5. Typeof: Các toán tử typeof cho phép trả về kiểu của một biến.
+            Cú pháp: typeof x (với x là một biến hoặc biểu thức)
+       
+        6. Làm việc với String
+            Length: Length trả về độ dài của chuỗi.
+            
+            indexOf()
+                Tìm vị trí đầu tiên của một chuỗi nằm trong một chuỗi.
+                Nếu không tìm thấy sẽ trả về -1.
+                Có phân biệt chữ hoa, chữ thường.
+                Cú pháp: 
+                        string.indexOf(searchvalue, start)
+                Trong đó:
+                        searchvalue: Giá trị cần tìm kiếm (bắt buộc).
+                        start: Vị trí bắt đầu tìm kiếm (tính từ trái qua phải) và sẽ tìm kiếm xuôi tiếp (mặc định bắt đầu từ 0).
+    
+            lastIndexOf() 
+               Tìm vị trí cuối cùng của một chuỗi nằm trong một chuỗi.
+         
+            slice()
+                Dùng để cắt một chuỗi và trả về một chuỗi mới.
+                Chuỗi ban đầu không thay đổi.
+                Cú pháp: 
+                        string.slice(start, end)
+                Trong đó:
+                        start: Vị trí bắt đầu cắt (bắt buộc).
+                        end: Vị trí kết thúc cắt (không bắt buộc).
+    
+            replace()
+                Dùng để thay thế 1 chuỗi thành 1 chuỗi mới.
+                Nhưng chỉ thay thế chuỗi đầu tiên mà nó tìm thấy.
+                Muốn thay thế được tất cả các từ tìm thấy thì phải dùng Regular Expression (Biểu thức chính quy).
+                Cú pháp: 
+                        string.replace(searchValue, newValue)
+                Trong đó:
+                        searchValue: Từ khóa cần thay thế (bắt buộc).
+                        newValue: Từ khóa mới để thay thế (bắt buộc).
+        
+            toUpperCase() và toLowerCase()
+                toUpperCase() dùng để viết hoa tất cả các chữ cái.
+                toLowerCase() dùng để viết thường tất cả các chữ cái.
+
+            trim()
+                Dùng để bỏ đi khoảng trắng ở 2 đầu, các khoảng trắng giữa các ký tự không bị loại bỏ.
+
+            charAt()
+                Dùng để lấy ký tự thông qua index (với index là vị trí của ký tự cần lấy).
+                Cú pháp: 
+                        string.charAt(index)
+
+            split() 
+                Chuyển một chuỗi thành một array, nhưng cần tìm ra điểm chung của chuỗi đó.
+    
+
+        7. Làm việc với Number 
+            isNaN(): Dùng để kiểm tra một biến có phải là NaN không.
+                Cú pháp: 
+                        isNaN(tenBien)
+   
+            toString(): Chuyển kiểu số thành kiểu string.
+                Cú pháp: 
+                        tenBien.toString()
+
+            toFixed(): Dùng để làm tròn số thập phân.
+                Nếu số ngay sau số cần làm tròn mà >= 5 thì sẽ làm tròn lên, nếu < 5 sẽ làm tròn xuống.
+                Cú pháp: 
+                        toFixed(digits)
+                Trong đó: 
+                        digits là số chữ số sau dấu thập phân (0 <= digits <= 100). Không điền mặc định là 0.
+
+
+        8. Làm việc với Array
+            toString(): Chuyển array thành string. Tự động thêm dấu phẩy ngăn cách.
+                Cú pháp: 
+                        array.toString()
+                        
+            join(): Chuyển array thành string. Thêm dấu bất kỳ để ngăn cách giữa các phần tử.
+                Cú pháp: 
+                        array.join(separator)
+                Trong đó: 
+                        separator (dải phân cách) là dấu ngăn cách để thêm vào string. Mặc định là dấu phẩy.
+             
+            pop(): Dùng để xóa phần từ cuối mảng và trả về phần tử cuối mảng đó.
+                Cú pháp: 
+                        array.pop()
+             
+            push(): Thêm một hoặc nhiều phần tử vào cuối mảng. Trả về độ dài mới của mảng.
+                Cú pháp: 
+                        array.push(item1, item2, ..., itemX)
+
+            shift(): Dùng để xóa phần tử đầu mảng và trả về phần tử ở đầu mảng đó.
+                Cú pháp: 
+                        array.shift()
+
+            unshift(): Thêm một hoặc nhiều phần tử vào đầu mảng. Trả về độ dài mới của mảng.
+                Cú pháp: 
+                        array. unshift(item1, item2, ..., itemX)
+
+            splice(): Xóa hoặc chèn phần tử mới vào mảng. Trả về mảng bị xóa.
+                Cú pháp: 
+                        array.splice(index, howmany, item1, ....., itemX)
+                Trong đó:
+                        index: Vị trí thêm/xóa phần tử (bắt buộc).
+                        howmany: Số phần tử cần xóa (không bắt buộc).
+                        item1, ..., itemX: Các phần tử mới được thêm vào (không bắt buộc).
+             
+            concat():Dùng để nối 2 array. Không làm ảnh hưởng đến mảng ban đầu.
+                Cú pháp: 
+                        array1.concat(array2, array3, ..., arrayX)
+
+            slice(): Dùng để cắt các phần tử. Không làm ảnh hưởng đến mảng ban đầu.
+                Cú pháp: 
+                        array.slice(start, end)
+                Trong đó:
+                        start: Vị trí bắt đầu. Mặc định là 0. (không bắt buộc).
+                        end: Vị trí kết thúc. Mặc định là phần tử cuối cùng. (không bắt buộc).     
+    </pre>
+
+
+</body>
+</html>
+
+
+<style>
+    pre {
+        white-space: pre-wrap;   /* Cho phép ngắt dòng */
+        word-wrap: break-word;   /* Ngắt từ khi cần */
+    }
+</style>

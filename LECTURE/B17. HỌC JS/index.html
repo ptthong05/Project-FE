@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <pre style="font-size: 25px;">
+        01. Functions
+            Cú pháp hàm tự định nghĩa:
+	            function tenHam(thamSo1, thamSo2,...) {
+	                // Code
+	            }
+            Gọi hàm:
+	            tenHam(doiSo1, doiSo2,...);
+
+            Đối tượng arguments: chỉ dùng được ở trong hàm. Giả sử khi gọi hàm và truyền đối số vào thì tất các các đối số đó sẽ được nằm trong arguments dưới dạng một mảng.
+            Từ khóa return: sẽ trả về kết quả nằm ở bên phải của chữ return. Những dòng code ở bên dưới return sẽ không hoạt động.
+                
+            1.2. Các loại hàm (các cách viết hàm)
+                1.2.1. Declaration function (Hàm định nghĩa)
+                    Có tính hoisting (tức là gọi được hàm trước lúc khai báo hàm đó).
+                    Cú pháp:
+	                    function tenHam(thamSo1, thamSo2,...) {
+	                        // Code
+	                    }
+
+                1.2.2 Expression function (Hàm biểu thức)           
+                    Không có tính hoisting (Nếu gọi hàm trước lúc khai báo hàm thì sẽ gặp lỗi).
+                    Cú pháp:
+	                    var tenHam = function(thamSo1, thamSo2,...) {
+	                        // Code
+	                    }
+
+                1.2.3 Arrow function (Hàm mũi tên)        
+                     Không có tính hoisting (Nếu gọi hàm trước lúc khai báo hàm thì sẽ gặp lỗi).
+                    Cú pháp:
+	                    var tenHam = (thamSo1, thamSo2,...) => {
+	                        // Code
+	                    }
+                    Lưu ý: Arrow Function sẽ không có Arguments. Để  lấy các đối số đã truyền dưới dạng một mảng thì chúng ta sẽ sử dụng cú pháp spread.
+   
+
+        02. Try Catch
+            Try catch là một khối lệnh dùng để bắt lỗi chương trình.
+            Ta sử dụng try catch khi muốn chương trình không bị dừng khi một lệnh nào đó bị lỗi. Thường thì đó là những lỗi do người dùng nhập sai dữ liệu, hoặc người dùng thao tác bị sai.
+            Cú pháp:
+	            try {
+	                // Chạy vào đây đầu tiên
+	            } catch (error) {
+	                // Nếu lỗi chạy vào đây
+	            } finally {
+	                // Luôn luôn chạy vào đây và chạy sau cùng
+	            }   
+                
+        03. Làm việc với Object nâng cao       
+            3.1. Cách thêm 1 key mới vào object
+                Cú pháp:
+	                tenObject.tenKey = value;
+                Hoặc:
+	                tenObject["tenKey"] = value;
+
+            3.2. Cách xóa 1 key khỏi object
+                delete tenObject.tenKey;
+
+        04. Làm việc với Array nâng cao
+            4.1. forEach()
+                Để duyệt qua mỗi phần tử của mảng và thực hiện một hành động nào đó.
+                Có thể thay đổi trực tiếp mảng ban đầu
+                Cú pháp:
+	                arr.forEach(function(currentValue, index, array) {
+	                    // code xử lý
+	                });
+                Trong đó:
+                    currentValue: phần tử hiện tại đang được xử lý của array.
+                    index: chỉ số của phần tử hiện tại đang được xử lý của array.
+                    array: mảng hiện tại đang gọi hàm forEach().
+ 
+            4.2. every() -- TRẢ T OR F 
+                Kiểm tra tất cả các phần tử của một mảng phải thỏa mãn một điều kiện gì đó.
+                Cú pháp:
+                    arr.every(function(currentValue, index, array) {
+                        // code xử lý
+                    });
+                Trong đó:
+                    currentValue: phần tử hiện tại đang được xử lý của array.
+                    index: chỉ số của phần tử hiện tại đang được xử lý của array.
+                    array: mảng hiện tại đang gọi hàm every().
+             
+            4.3. some()
+                Ngược lại Every -- Kiểm tra chỉ cần một phần tử của một mảng thỏa mãn một điều kiện gì đó là được.
+    
+            4.4. find()
+                Tìm xem trong mảng có giá trị giống với giá trị đang cần tìm không, nếu có thì trả về chính phần tử của mảng đó. Nếu không có thì trả về undefined.
+                Chỉ tìm được 1 phần tử trong mảng.
+                Cú pháp:
+                    arr.find(function(currentValue, index, array) {
+                        // code xử lý
+                    });
+                Trong đó:
+                    currentValue: phần tử hiện tại đang được xử lý của array.
+                    index: chỉ số của phần tử hiện tại đang được xử lý của array.
+                    array: mảng hiện tại đang gọi hàm find().    
+            
+            4.5. filter()
+                Giống find, nhưng cho phép tìm được nhiều phần tử và trả về một array gồm các phần tử đã tìm được.
+             
+            4.6. map()
+                Hàm map() sẽ lặp qua từng phần tử của mảng. Giá trị trả về của hàm map là một mảng mới, với số lượng phần tử bằng với mảng cũ, nhưng giá trị của các phần tử thì được quyết định bởi lệnh return của hàm map.
+                Cú pháp:
+                    arr.map(function(currentValue, index, array) {
+                        // code xử lý
+                    });    
+
+            4.7. reduce()
+                Hàm reduce() sẽ duyệt qua từng phần tử trong mảng và tính toán các phần tử đó, sau đó trả về một giá trị cuối cùng.
+                Cú pháp:
+                    arr.reduce(function(total, currentValue, currentIndex, array) {
+                        // code xử lý
+                    }, initialValue);    
+                Trong đó:
+                    total: giá trị trả lại trước đó của function, chính là giá trị của lệnh return cho mỗi lần lặp.
+                    initialValue: tham số không bắt buộc. Nếu được truyền vào thì initialValue sẽ được sử dụng làm giá trị ban đầu, còn không thì nó sẽ lấy giá trị của phần tử đầu tiên.             
+    </pre>
+</body>
+</html>
+
+<style>
+    pre {
+        white-space: pre-wrap;   /* Cho phép ngắt dòng */
+        word-wrap: break-word;   /* Ngắt từ khi cần */
+    }
+</style>

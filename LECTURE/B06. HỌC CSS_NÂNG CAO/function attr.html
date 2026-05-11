@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function attr</title>
+</head>
+<body>
+    <!-- data-text Tự định nghĩa -->
+    <span data-text="Xin chào "></span>>Phạm Tấn Thông</span>
+</body>
+</html>
+
+<style>
+    span::before {
+        /* content: "Xin chào"; */
+        content: attr(data-text);
+    }
+</style>

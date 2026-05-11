@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cacThe</title>
+</head>
+<body>
+    <div>
+        <pre>
+            01. Float và Clear
+                Thuộc tính float là một thuộc tính được sử dụng để chuyển một phần tử sang góc trái hoặc góc bên phải của không gian bao quanh nó.
+                    Float có các giá trị sau:
+                    float: left; // Phần tử nằm phía bên trái.
+                    float: right; // Phần tử nằm phía bên phải.
+                    float: none; // Phần tử nằm tại chính vị trí của nó (Mặc định).
+                Clearn ngăn chặn phần tử B chiếm vùng không gian của phần tử A (với A là phần tử sử dụng float).
+                    clear: left;
+                        Ngăn chặn phần tử B chiếm chỗ phần tử A, khi phần tử A có sử dụng float: left;
+                        Thuộc tính clear: left; không có tác dụng khi phần tử A sử dụng float: right;
+                    clear: right;
+                        Ngăn chặn phần tử B chiếm chỗ phần tử A, khi phần tử A có sử dụng float: right;
+                        Thuộc tính clear: right; không có tác dụng khi phần tử A sử dụng float: left;
+                    clear: both;  K AI CHIẾM
+                        Khi cả 2 phần tử A và phần tử B sử dụng float, chúng ta không thể sử dụng clear: left; hay clear: right; để ngăn chặn thành phần C chiếm vùng không gian còn trống, trong trường hợp này ta sử dụng thuộc tính clear: both; để ngăn chặn sự chiếm vùng của thành phần C.
+                        Thuộc tính clear: both; có thể ngăn chặn sự chiếm vùng không gian cả khi chỉ có một phần tử sử dụng float (left hoặc right).
+                    clear: none;
+                        Thuộc tính clear: none; là dạng phục hồi khi Thành phần sử dụng thuộc tính clear.
+        </pre>
+
+        <pre>
+            02. Attribute selectors (Bộ chọn thuộc tính)
+                Bộ chọn attribute được sử dụng để chọn các phần tử có thuộc tính được chỉ định.
+                    [attribute]  
+                    [attribute="value"]
+                    [attribute~="value"]   value đứng độc lập 
+                    [attribute|="value"]
+                    [attribute~="value"] chọn đc tất cả các value ĐẦU
+                    [attribute$="value"] chọn đc tất cả các value SAU
+                    [attribute*="value"] chọn tất cả các value CHỈ CẦN TRONG CLASS CÓ VALUE ĐÓ 
+        </pre>
+
+        <pre>
+            Units (Đơn vị)
+                Độ dài tuyệt đối (px) Là loại đơn vị có giá trị cố định và thể hiện chính xác chiều dài kích thước nó hiển thị, không phụ thuộc cũng như không thay đổi bởi bất kỳ tác động bên ngoài nào.
+                Độ dài tương đối Là đơn vị đo lường được sử dụng trong CSS ở mức tương đối, thường phụ thuộc vào 1 thành phần nào đó thì mới xác định được giá trị của nó.
+                    Một số đơn vị:
+                        %: giá trị tương đối so với phần tử cha.
+                        rem: giá trị tương đối với font-size của phần tử gốc. Phần tử gốc ở đây là thẻ html.
+                        em: 1em tương đương với kích cỡ của font-size của phần tử cha có định nghĩa font-size.
+                        vw (viewport width): 1vw tương đương với 1% của chiều rộng cửa sổ trình duyệt.
+                        vh (viewport height): 1vh tương đương với 1% của chiều cao cửa sổ trình duyệt.
+        </pre>
+
+        <pre>
+            Specificity (Tính đặc hiệu) và !important (Quan trọng)
+                Specificity (Tính đặc hiệu)
+                    Tính đặc hiệu (hay độ ưu tiên) là cách mà trình duyệt quyết định sẽ áp dụng thuộc tính css nào với một phần tử khi có nhiều quy tắc css cùng trỏ đến phần tử đó.
+                    ĐỘ Ưu Tiên: Inline ==> ID ==> Classes, Attributes, pseudo-classes ==> Elements, pseudo-elements
+                !important (Quan trọng)
+                    Muốn nào quan trọng thì thêm     
+        </pre>
+
+        <pre>
+            Math Functions (Hàm toán học)
+                Hàm calc()
+                    Thực hiện một phép tính, kết quả sẽ lấy làm giá trị thuộc tính. Các toán tử sau có thể được sử dụng: + – * /
+                    Ví dụ: width: calc(100% - 100px);
+                Hàm max()
+                    Sử dụng giá trị lớn nhất, từ danh sách giá trị được phân tách bằng dấu phẩy, làm giá trị thuộc tính.
+                    Cú pháp: max(value1, value2, …)
+                    Ví dụ: width: max(50%, 300px);
+                Hàm min()
+                    Sử dụng giá trị nhỏ nhất, từ danh sách giá trị được phân tách bằng dấu phẩy, làm giá trị thuộc tính.
+                    Cú pháp: min(value1, value2, …)
+                    Ví dụ: width: min(50%, 300px);
+        </pre>
+
+        <pre>
+            CSS function attr()
+                attr () là một hàm CSS trả về giá trị của một thuộc tính
+        </pre>
+
+        <pre>
+            Variables (Biến)
+                Mục đích của khai báo biến là để có thể sử dụng được ở nhiều nơi.
+                Kiểu global (toàn cục): có thể sử dụng được nhiều nơi trong file css.
+                Kiểu local (cục bộ): chỉ sử dụng được ở trong phạm vi của nó, những đoạn css khác không sử dụng được.
+                
+            Cách tạo biến global:
+                :root {
+                    --ten-bien: giá trị;
+                }
+                Cách sử dụng biến:
+                    var(--ten-bien);
+
+            Cách tạo biến local:
+                selector {
+                    --ten-bien: giá trị;
+                }
+                Cách sử dụng biến:
+                selector {
+                    --ten-bien: giá trị;
+                    var(--ten-bien);
+                }
+        </pre>
+
+        <pre>
+            Box Sizing (Kích thước hộp)
+                Mặc định khi ta sử dụng thuộc tính width, height thì chỉ là áp dụng cho phần content của 1 element.
+                2 loại box-sizing:
+                    content-box: 
+                        Mặc định. Width/height chỉ bao gồm “nội dung” của phần tử.
+                        width, height = content
+                    border-box:
+                        Width/height bao gồm: content, padding, border của phần tử.
+                        width, height = content + padding + border.
+        </pre>
+
+        <pre>
+            Responsive
+                Sử dụng media query để responsive giao diện.
+        </pre>
+
+        <pre>
+            Media Queries
+                Cú pháp:
+                    @media mediaType and (mediaFeature) {
+                        // Code
+                    }
+                Trong đó:
+                    mediaType gồm các thuộc tính hay sử dụng sau:
+                        all: Dùng cho mọi thiết bị
+                        print: Dùng cho máy in
+                        screen: Dùng cho máy tính và các thiết bị di động
+                    mediaFeature gồm các thuộc tính hay sử dụng sau:
+                        max-width: Chiều rộng tối đa của viewport
+                        min-width: Chiều rộng tối thiểu của viewport
+                        
+            PC first (Responsive):
+                    PC first là khái niệm để chỉ việc lập trình giao diện từ màn hình to đến màn hình nhỏ. Sử dụng max-width
+            Mobile first:
+                    Mobile first là khái niệm để chỉ việc lập trình giao diện từ màn hình nhỏ đến màn hình to. Sử dụng min-width
+            
+            1024px - 768px - 480px - 320px        (Từ PC - mobile)
+        </pre>
+    </div>
+</body>
+</html>

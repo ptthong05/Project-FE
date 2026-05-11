@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <pre style="font-size: 30px;">
+        1. Câu lệnh if...else
+            Toán tử 3 ngôi 
+                var result = condition ? value1 : value2;
+                
+        2. Switch Case -- Ứng với mỗi nhánh sẽ có một điều kiện cụ thể và điều kiện đó phải sử dụng toán tử so sánh bằng.
+
+        3. Vòng lặp For
+            Vòng lặp for dùng để lặp lại việc thực thi một đoạn mã nào đó một số lần.
+            Cú pháp:
+                for (bienkhoitao; dieukienthucthi; buocnhay) { 
+                    // code...
+                }
+
+        04. Vòng lặp For In
+            Vòng lặp for in dùng để lấy ra key của một object (cũng có thể áp dụng cho array, string).
+            Cú pháp:
+                for (key in object) {
+                    // Viết code ở đây
+                }
+            Trong đó:
+                key: là tên biến (đặt tên là gì cũng được).
+                object: là một object, mỗi key sẽ tương ứng với key ở trong object.
+
+        05. Vòng lặp For Of
+            Vòng lặp for of dùng để lấy ra phần tử của một array, string (không áp dụng được với object).
+            Cú pháp:
+                for (variable of iterable) {
+                    // Viết code ở đây
+                }
+            Trong đó:
+                variable: là tên biến, lấy ra các giá trị trong mảng.
+                iterable: là một mảng hoặc string, mỗi variable sẽ tương ứng với từng giá trị ở trong mảng hoặc string.
+       
+        06. Vòng lặp While
+            Vòng lặp while luôn luôn kiểm tra điều kiện trước, nếu điều kiện thỏa mãn thì mới chạy vào trong vòng lặp.
+            Cú pháp:
+                while (condition) {
+                    // code
+                }
+            Khi condition có giá trị true thì code được thực thi. Ngược lại, khi condition là false thì vòng lặp kết thúc.
+    
+            do…while
+                Khác với vòng lặp while, vòng lặp do...while luôn thực hiện ít nhất một lượt lặp. Sau đó mới kiểm tra điều kiện lặp.
+                Cú pháp:
+                    do {
+                        // code
+                    } while (condition);
+    
+        07. Break 
+            Lệnh break có tác dụng dừng vòng lặp cho dù điều kiện của vòng lặp vẫn đang đúng.
+        
+        08. Continue
+            Lệnh continue có tác dụng bỏ qua một bước lặp nào đó.
+            Nghĩa là lúc gặp lệnh continue thì tất cả những đoạn code nằm bên dưới sẽ không được thực hiện mà nó sẽ nhảy sang vòng lặp mới luôn.
+        
+        09. Variables (Biến)
+            Var 
+                Ở trong hay ngoài phạm vi đều sử dụng đc   
+
+            Khai báo biến bằng từ khóa let
+                khai báo một biến chỉ sử dụng tạm thời trong một phạm vi nhất định. Phạm vi này ta hay gọi là block scope.
+   
+            Khai báo biến bằng từ khóa const
+                const là một hằng số, vì vậy khi khai báo biến const thì bạn phải gán giá trị cho nó luôn, sau này cũng không thể thay đổi giá trị cho biến.  
+                
+            Khai báo biến không cần dùng từ khóa
+                Chỉ nên sử dụng cách này khi ta muốn gán lại giá trị của một biến.    
+    </pre>
+</body>
+</html>
+
+<style>
+    pre {
+        white-space: pre-wrap;   /* Cho phép ngắt dòng */
+        word-wrap: break-word;   /* Ngắt từ khi cần */
+    }
+</style>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <!-- <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+         <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div> -->
+    </div>
+</body>
+</html>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .container {
+        /* display: inline-flex; */
+        display: flex;
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column-reverse; */
+        background-color: yellow;
+        padding: 50px;
+        height: 300px;                        /* align-items: stretch; Mặc định item sẽ có chiều cao bằng chiều cao container */
+
+        /* Tự động xuống dòng khi không đủ chỗ CONTAINER K ĐỦ CHỖ */
+        flex-wrap: wrap;           
+
+        /* flex-wrap: nowrap; */
+        /* flex-wrap: wrap-reverse; */
+
+
+        /* căn chỉnh các item về bên phải  */
+        /* justify-content: flex-end;        */
+
+        /* Căn giữa */
+        /* justify-content: center; */
+
+        /* Căn đều các item sát lề container - K CÓ KHOẢNG CÁCH ĐẦU CUỐI */
+        /* justify-content: space-between; */ 
+
+        /* Căn đều các item sát lề container - CÓ KHOẢNG CÁCH ĐẦU CUỐI 1/2 KHOẢNG CÁCH ITEM*/
+        /* justify-content: space-around; */
+
+        /* Căn đều các item sát lề container - CÓ KHOẢNG CÁCH ĐẦU CUỐI 1 KHOẢNG CÁCH ITEM*/
+        justify-content: space-evenly;
+        /* align-items: stretch; */
+
+        /* Căn item về phía đầu cross-axis */
+        /* align-items: flex-start;          */
+
+        /* Căn item về phía cuối cross-axis */
+        /* align-items: flex-end; */
+        
+        /* Căn item về giữa cross-axis */
+        /* align-items: center; */
+
+        /* Căn NHIỀU dòng về phía đầu cross-axis */
+        /* align-content: flex-start;           */
+
+        align-items: flex-end;
+    }
+
+
+    /* CĂN 1 ITEM 2 VỀ GIỮA CROSS-AXIS */
+    /* .item:nth-child(2) {
+        align-self: center;
+    } */
+
+
+    /* SẮP XẾP LẠI THỨ TỰ HIỂN THỊ CỦA ITEM THẤP NHẤT LÀ 0*/
+    /* 0 xếp đầu là 1 - 2 - 3 */
+            .item:nth-child(2) {
+                order: 2;
+            }
+
+            .item:nth-child(1) {
+                order: 0;
+            }
+            .item:nth-child(3) {
+                order: 1;
+            }
+
+    div.item {
+        background-color: red;
+        color: white;
+        padding: 20px;
+        margin: 10px;
+        font-size: 30px;
+        height: 100px;
+    }
+</style>

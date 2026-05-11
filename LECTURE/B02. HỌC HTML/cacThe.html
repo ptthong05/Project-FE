@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các thẻ HTML</title>
+</head>
+<body>
+    <h1>Các thẻ HTML</h1>
+    <!-- Thẻ a -->
+    <div>
+        <pre>
+            1. Thẻ &lt;a&gt;
+                Thuộc tính:
+                    href  (Hypertext Reference - tài liệu tham khảo dạng siêu văn bản): thuộc tính xác định địa chỉ liên kết.
+                    target: thuộc tính xác định nơi mà tài liệu được mở.
+                        _self: Mặc định. Mở tài liệu ở tab hiện tại.
+                        _blank: Mở tài liệu trong tab mới.
+                    title: Thông tin bổ sung về một element.(Khi HOVER vào Tại đây thì title hiện ra dưới)
+        </pre>
+        <p>Xem tài liệu<a href="https://www.google.com/" target="_blank" title="Đây là link sang google">Tại đây</a></p>
+    </div>
+    
+
+    <!-- Thẻ img -->
+    <div>
+        <pre>
+            2. Thẻ &lt;img&gt; là thẻ chèn ảnh
+        </pre>
+        <img src="image.png" alt="Hình 01" style="width: 100%; height: 150px;">
+    </div>
+
+
+    <!-- Thẻ video -->
+    <div>
+        <pre>
+            3. Thẻ video 
+                Cú pháp:
+                    &lt;video width="320" height="240" controls&gt;
+	                    &lt;source src=“link-video.mp4" type="video/mp4"&gt;
+                    &lt;/video&gt;
+                Thuộc tính:
+                    width/height: Chiều rộng và chiều cao của video. Nếu không để width/height thì web có thể bị nhấp nháy trong khi tải video.
+                    controls: Thuộc tính điều khiển, như là bật, tạm dừng, âm lượng
+                    loop: Lặp lại video
+                    src: Đường dẫn video
+                    type: Kiểu video (mp4, ogg, webm)
+                    autoplay: Tự động phát video -- Phải tắt tiếng muted mới tự phát đc.
+                    muted: Tắt tiếng
+        </pre>
+        <video width="320" height="240" controls loop>
+           <source src="video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <!-- Thẻ audio -->
+    <div>
+        <pre>
+            4. Thẻ audio
+                Cú pháp:
+                    &lt;audio controls&gt;
+	                    &lt;source src=“link-audio.mp3" type="audio/mpeg"&gt;
+                    &lt;/audio&gt;
+                Thuộc tính:
+                    controls: Thuộc tính điều khiển, như là bật, tạm dừng, âm lượng
+                    loop: Lặp lại audio
+                    src: Đường dẫn audio
+                    type: Kiểu video (Ví dụ: mpeg - là mp3, ogg, webm, wav)
+                    autoplay: Tự động phát audio
+                    muted: Tắt tiếng
+        </pre>
+        <audio controls autoplay muted>
+            <source src="01.03.U1.CB.mp3" type="audio/mp3"/>
+        </audio>
+    </div>
+
+
+    <!-- Thẻ Table -->
+    <div>
+        <pre>
+            5. Thẻ table (bảng)
+                Ý nghĩa các thẻ:
+                    &lt;table&gt;&lt;/table&gt;: Xác định một bảng
+                    &lt;thead&gt;&lt;/thead&gt;: Phần đầu của bảng
+                    &lt;tbody&gt;&lt;/tbody&gt;: Phần thân của bảng
+                    &lt;tr&gt;&lt;/tr&gt; (table row):  Xác định một hàng của bảng
+                    &lt;th&gt;&lt;/th&gt; (table header): Xác định tiêu đề của bảng
+                    &lt;td&gt;&lt;/td&gt; (table data): Xác định dữ liệu ô của bảng
+                Thuộc tính:
+                    colspan: tạo ô mở rộng trên nhiều cột
+                    rowspan: tạo ô kéo dài trên nhiều hàng              
+        </pre>
+    </div>
+
+        
+    <!-- Thẻ ul, ol -->
+    <div>
+        <pre>
+            Thẻ ul và ol đều là thẻ danh sách.
+                Thẻ ul k đánh số hay chữ cáif la
+                Thẻ ol đc đánh số và chữ cái
+                    type="1": Mặc định. Các mục trong danh sách sẽ được đánh dưới dạng số
+                    type= "A": Các mục trong danh sách sẽ được đánh dưới dạng chữ hoa
+                    type="a": Các mục trong danh sách sẽ được đánh dưới dạng chữ thường
+                    type="I": Các mục trong danh sách sẽ được đánh dưới dạng số La Mã viết hoa
+                    type="i": Các mục trong danh sách sẽ được đánh dưới dạng số La Mã viết thường
+
+        </pre>
+    </div>
+
+
+    <!-- Phân biệt block - inline -->
+    <div>
+        <pre>
+            Kiểu Block 
+                Luon luôn bắt đầu trên một dòng mới, và trình duyệt sẽ tự động thêm khoảng trống trước và sau element.
+                Luôn luôn chiếm toàn bộ chiều rộng có sẵn.
+                Một số thẻ dạng block:
+                        &lt;address&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;blockquote&gt;, &lt;canvas&gt;, &lt;dd&gt;, &lt;div&gt;, &lt;dl&gt;, &lt;dt&gt;, &lt;fieldset&gt;, &lt;figcaption&gt;, &lt;figure&gt;, &lt;footer&gt;, &lt;form&gt;, &lt;h1&gt; - &lt;h6&gt;, &lt;header&gt;, &lt;hr&gt;, &lt;li&gt;, &lt;main&gt;, &lt;nav&gt;, &lt;noscript&gt;, &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;, &lt;section&gt;, &lt;table&gt;, &lt;tfoot&gt;, &lt;ul&gt;.
+
+            Kiểu inline
+                Không bắt đầu trên một dòng mới, chiều rộng bằng với chiều rộng của element đó.
+                Một số thẻ dạng inline:
+                        &lt;a&gt;, &lt;abbr&gt;, &lt;acronym&gt;, &lt;b&gt;, &lt;bdo&gt;, &lt;big&gt;, &lt;br&gt;, &lt;button&gt;, &lt;cite&gt;, &lt;code&gt;, &lt;em&gt;, &lt;i&gt;, &lt;img&gt;, &lt;input&gt;, &lt;kbd&gt;, &lt;label&gt;, &lt;map&gt;, &lt;object&gt;, &lt;output&gt;, &lt;q&gt;, &lt;samp&gt;, &lt;script&gt;, &lt;select&gt;, &lt;small&gt;, &lt;span&gt;, &lt;strong&gt;, &lt;sub&gt;, &lt;sup&gt;, &lt;textarea&gt;, &lt;time&gt;, &lt;tt&gt;, &lt;var&gt;.
+        </pre>
+    </div>
+</body>
+</html>
+
+<style>
+    pre {
+        white-space: pre-wrap;   /* Cho phép ngắt dòng */
+        word-wrap: break-word;   /* Ngắt từ khi cần */
+    }
+</style>

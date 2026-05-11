@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+	    var b = "Test";
+	    var result = a / b;
+        console.log(result); // Trả về NaN
+        console.log(isNaN(result)); //  Trả về true	
+
+
+        var a = 10;
+	    var b = a.toString();
+	    var c = (10).toString();      // Biến 10 thành string K CÓ BIẾN 
+        console.log(a); // Trả về số 10
+        console.log(typeof a); // Trả về kiểu number
+        console.log(b); // Trả về chuỗi 10
+        console.log(typeof b); // Trả về kiểu string
+        console.log(c); // Trả về chuỗi 10
+        console.log(typeof c); // Trả về kiểu string
+
+
+        var a = 12.3456;
+        console.log(a.toFixed()); // Trả về 12
+        console.log(a.toFixed(0)); // Trả về 12
+        console.log(a.toFixed(1)); // Trả về 12.3
+        console.log(a.toFixed(2)); // Trả về 12.35
+        console.log(a.toFixed(3)); // Trả về 12.346
+
+
+    </script>
+</body>
+</html>

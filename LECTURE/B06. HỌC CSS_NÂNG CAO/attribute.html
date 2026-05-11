@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute</title>
+</head>
+<body>
+    <a href="https://www.google.com/?hl=vi" title="Web google">Google</a>
+    <a href="https://developers.facebook.com/tools/explorer/" target="_blank" title="Web facebook">Facebook</a>
+    <a href="https://www.youtube.com/" target="_self">Youtube</a>
+
+    <p class="top-header test">Nội dung 1</p>
+    <p class="top- header test">Nội dung 2</p>
+    <p class="topheader">Nội dung 3</p>
+    <p class="top">Nội dung 4</p>
+    <p class="top test">Nội dung 5</p>
+    <p class="test top">Nội dung 6</p>
+</body>
+</html>
+
+<style> 
+    /* Thẻ a có attribute target */
+    a[title="Web facebook"] {
+        background-color: aquamarine;
+    }
+
+    a[title~="google"] {
+        background-color: red;
+    }
+
+    /* | tìm tất cả các value có top hoặc sau top là - */
+    /* p[class|="top"] {            
+        background-color: aqua;
+    } */
+
+    /* chọn đc tất cả các value ĐẦU   */
+    /* p[class^="top"] {            
+        background-color: aqua;
+    } */
+     
+    /* chọn đc tất cả các value SAU */
+    /* p[class$="test"] {            
+        background-color: aqua;
+    } */
+
+    p[class*="header"] {
+        background-color: blue;
+    }
+</style>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // function sum(a, b) {
+        //     return a + b;
+        // }
+        // let result = sum(10, 20);
+        // console.log(result);
+
+
+        // function sum() {
+        //     // console.log(arguments);
+        //     let sum = 0;
+        //     for(item of arguments) {
+        //         sum += item;
+        //     }
+        //     return sum;
+        // }
+
+        // let ketQua = sum(10, 20, 30, 40, 50);
+        // console.log(ketQua);
+    </script>
+
+
+    <script>
+        // Declaration function (Hàm định nghĩa) -- GỌI HÀM TRC ĐỊNH NGHĨA HÀM SAU 
+        // let result = sum(10, 20);
+        // console.log(result);
+        
+        // function sum(a, b) {
+        //     return a + b;
+        // }
+    </script>
+
+            
+    <script>
+        // Expression function (Hàm biểu thức) -- K CÓ TÍNH HOISTING
+        // const sum = function(a, b) {
+        //     return a + b;
+        // }
+        // let result = sum(10, 50);
+        // console.log(result); 
+    </script>
+
+
+
+    <script>
+        // Arrow function (Hàm mũi tên)
+        // const sum = (a, b) => {
+        //     return a + b;
+        // }
+        // let result = sum(10, 50);
+        // console.log(result); 
+    </script>
+
+
+    <script>
+        // Ví dụ 1: Tính tổng các số chẵn của mảng. Mảng như sau:
+	    //     var mang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // var mang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // function tinhTongSoChan(array) {
+        //     let tong = 0;
+        //     for(item of array) {
+        //         if(item % 2 == 0) {
+        //             tong += item;
+        //         }
+        //     }
+        //     return tong;
+        // }
+        // let result = tinhTongSoChan(mang);
+        // console.log(result);
+    </script>
+
+
+    <script>
+        // Ví dụ 2:Viết chương trình cho người dùng nhập vào số n lớn hơn 0, sau đó dựa vào n tính giá trị của biểu thức:
+	    //     bieuThuc = 1/n + 2/n + 3/n + ... + n/n.
+        
+        function tinhBieuThuc(n) {
+            let ketQua = 0;
+            for(let i = 1; i <= n; i++) {
+                ketQua += i/n;
+            }
+            return ketQua;
+        }
+
+        let n;
+        do {
+            n = prompt("Nhap so n");
+            n = parseInt(n);      // parseInt(n) CHUYỂN N STRING THÀNH INT 
+            if(n<=0) {
+                console.log("Vui long nhap so lon hon 0");
+            } else {
+                let ketQua = tinhBieuThuc(n);
+                console.log(ketQua);
+            }
+        } while (n <= 0)
+       
+    </script>
+
+</body>
+</html>

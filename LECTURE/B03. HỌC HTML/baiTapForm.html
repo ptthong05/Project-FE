@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baiTapForm</title>
+</head>
+<body>
+    <form action="" method="POST" target="_blank">
+        <!-- Thuộc tính for của thẻ label phải bằng thuộc tính id của phần tử input  -->
+        <!-- for: click vào Họ và tên vẫn focus vào ô input khi bỏ for sẽ k focus vào input -->
+        <label for="full_name">Họ và tên</label>
+        <input name="ho_ten" type="text" id="full_name" />
+        <br>
+        <hr>
+
+
+        <label for="color">Màu sắc</label>
+        <!-- Gởi lên server cặp name/value -->
+        <!-- size là giá trị hiển thị chỉ 2  -->
+        <!-- multiple cho phép chọn nhiều giá trị -->
+        <select name="color" id="color" size="2" multiple>
+            <option value="vang">Yellow</option>
+            <!-- selected chọn mặc định -->
+            <option value="do" selected>Red</option>
+            <option value="den">Black</option>
+        </select>
+
+        <hr>
+        <!-- rows = 4 giới hạn 4 dòng  -->
+        <!-- cols chiều rộng lấy theo ký tự. VD row = 20 thì 20 ký tự r xún dòng -->
+        <textarea name="information" rows="4"></textarea>
+
+        <hr>
+        <button>Submit</button>
+
+        <hr>
+        <input name="ngay_di" type="date" />
+        <br><hr>
+        <input name="gio_di" type="time" />
+        <br><hr>
+        <input type="datetime-local" name="dat_lich">
+        <br><hr>
+        <input type="file" name="file">
+        <br><hr>
+        <input type="checkbox" id="ngonNguC" name="language" value="c">
+        <label for="ngonNguC">Ngôn ngữ C</label>
+        
+        <input type="checkbox" id="ngonNguPython" name="language" value="python">
+        <label for="ngonNguPython">Ngon ngữ Python</label>
+        
+        <input type="checkbox" id="ngonNguJava" name="language" value="java">
+        <label for="ngonNguJava">Ngôn ngữ Java</label>
+        
+        <input type="checkbox" id="ngonNguC+" name="language" value="c++">
+        <label for="ngonNguC+">Ngôn ngữ C++</label>
+
+        <br><hr>
+        <input type="radio" id="ngonNguC-" name="language" value="c">
+        <label for="ngonNguC-">Ngôn ngữ C</label>
+        
+        <input type="radio" id="ngonNguP" name="language" value="python">
+        <label for="ngonNguP">Ngon ngữ Python</label>
+
+        <br><hr>
+        <!-- range có min max và bước nhảy step  -->
+        <input type="range" name="volume" min="0" max="100" step="5">
+        
+        <br><hr>
+        <input type="color" name="color">
+
+        <br><hr>
+        <!-- value giá trị mặc định ban đầu CÓ THỂ SỬA VALUE R GỞI LÊN SERVER -->
+        <input type="text" name="name" value="PhamTanThong" />
+
+        <br><hr>
+        <!-- readonly value đã  có giá trị chỉ CHO PHÉP ĐỌC K SỬA ĐC  -->
+        <input type="number" name="CCCD" value="01334" readonly>
+
+        <br><hr>
+        <!-- disabled BỊ ẨN khi nhấn gởi k gởi lên server -->
+        <input type="email" name="email" value="ptt@gmail.com" disabled>
+
+        <br><hr>
+        <!-- maxlength CHỈ NHẬP TỐI ĐA 20 KÝ TỰ -->
+        <input type="text" name="hoten" maxlength="20" />
+
+        <br><hr>
+        <!-- min và max tối thiểu và tối đa -->
+        <input type="number" name="sl" min="2" max="100" />
+
+        <br><hr>
+        <input type="email" name="email" placeholder="Nhập email" />
+
+        <br><hr>
+        <!-- required bắt bộc nhập khi gởi -->
+        <input type="text" name="hoTen" required>
+    </form>
+</body>
+</html>

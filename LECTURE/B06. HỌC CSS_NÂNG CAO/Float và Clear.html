@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float và Clear</title>
+</head>
+<body>
+    <div class="element-parent">
+        <div class="element-child element-a">Phần tử A</div>
+        <div class="element-child element-b">Phần tử B</div>
+        <div class="element-child element-c">Phần tử C</div>
+    </div>
+</body>
+</html>
+
+<style>
+.element-child.element-a {
+    background-color: aqua;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    float: left;
+    width: 30%;           /* K cho B chiếm khoảng trống của A */
+}
+
+.element-child.element-b {
+    background-color: blue;
+    height: 100px;
+    text-align: center;
+    clear: left;
+}
+
+.element-child.element-c {
+    background-color: brown;
+    height: 100px;
+    text-align: center;
+    float: right;
+    width: 70%;
+}
+</style>

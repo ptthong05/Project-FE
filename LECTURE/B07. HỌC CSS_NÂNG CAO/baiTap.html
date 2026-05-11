@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catGiaoDien</title>
+</head>
+<body>
+    <header>
+        Header
+    </header>
+
+    <div class="banner">
+        <div class="content">
+            Content
+        </div>
+        <div class="aside">
+            Aside
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+    </div>
+
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>
+
+<style>
+    header {
+        background-color: #8CDBC3;
+        padding: 20px;
+        text-align: center;
+    }
+
+    div.banner {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    div.content {
+        width: 70%;
+        height: 150px;
+        background-color: #C9EEF1;
+        padding: 20px;
+        text-align: center;
+    }
+
+    div.aside {
+        width: 30%;
+        height: 150px;
+        background-color: #F2D8CA;
+        padding: 20px;
+        text-align: center;
+    }
+
+    div.main {
+        display: flex;
+        flex-wrap: wrap;
+        /* gap khoảng cách các box */  /* 3 gaáp = 30 */             /* 30 / 4 box = 7.5 */
+        gap: 10px;
+        margin-bottom: 10px;
+        justify-content: space-between;
+    }
+
+    div.box {
+        width: calc((100%/4) - 7.5px);
+        height: 50px;
+        background-color: #F2F1CA;
+        text-align: center;
+    }
+
+    div.box:nth-child(4) {
+        margin-right: 0;
+    }
+
+    footer {
+        background-color: #EECBF3;
+        padding: 20px;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        div.banner {
+            flex-wrap: wrap; /* Tự xún dòng k đủ chỗ */
+        }
+
+        div.content  {
+            width: 100%;
+        }
+
+        div.aside {
+            width: 100%;
+        } 
+
+        div.main {
+            flex-wrap: wrap;
+        }
+
+        div.box {
+            width: calc((100%/2) - 5px);
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        div.box {
+            width: 100%;
+        }
+    }
+</style>

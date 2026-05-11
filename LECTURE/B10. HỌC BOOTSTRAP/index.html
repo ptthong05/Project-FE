@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <h2>Dựng layout và sử dụng Grid</h2>
+    <pre style="font-size: 25px;">
+      .container: Giúp element căn đều 2 lề và có độ rộng tối đa là 1140px.
+      .container-fluid: Có độ rộng full màn hình (kéo dài từ trái sang phải)
+      Media Query 
+        Các điểm ngắt nhỏ hơn 1200px; 992px; 768px; 576px 
+
+        Col-xl áp dụng màn >= 1200px nhỏ hơn 1200px k áp dụng
+        Col-lg áp dụng màn >= 992px nhỏ hơn 992px k áp dụng
+        Col-md áp dụng màn >= 768px nhỏ hơn 768px k áp dụng
+        Col-sm áp dụng màn >= 576px nhỏ hơn 576px k áp dụng
+        Col- áp dụng màn nhỏ hơn 576px lớn hơn 576px k áp dụng
+
+        Components
+            Alerts: Dùng để hiển thị cảnh báo, thông báo.
+            Badges: Dùng để hiển thị biểu hiệu.
+            Breadcrumb là một tập hợp những liên kết giúp người dùng xác định vị trí hiện tại của mình trong cấu trúc website.
+            Buttons
+            arousel (Băng chuyền) là một slider.
+    </pre>
+
+
+
+    <!-- Class container trong bootstrap tự động căn giữa -->
+    <div class="container" style="background-color: aqua; font-size: 30px;">Nội dung</div>
+    <!-- Class container-fuild trong bootstrap căn ngang full màn -->
+    <div class="container-fluid" style="background-color: red; font-size: 30px;">Nội dung</div>
+    
+    <!-- Các điểm ngắt 1200px -- (Max-width)1140px; 992px -- 960px; 768px -- 720px; 576px -- 540px; nhỏ hơn 576px -- 100%; -->
+
+
+
+    <!-- Grid -->
+    <!-- <div class="container">
+      <div class="row"> -->
+        <!-- row - căn ngang đều thẳng hàng -->
+        <!-- Col-1: 1 chia 12  HẾT 12 CỘT TỰ XÚN DÒNG-->
+        <!-- col-2: chiếm 2 trong 12 phần -->
+          <!-- <div class="col-4">1</div> 
+          <div class="col-4">2</div>
+          <div class="col-4">3</div>
+          <div class="col-1">4</div>
+          <div class="col-1">5</div>
+          <div class="col-1">6</div>
+          <div class="col-1">7</div>
+          <div class="col-1">8</div>
+          <div class="col-1">9</div>
+          <div class="col-1">10</div>
+          <div class="col-1">11</div>
+          <div class="col-1">12</div>
+          <div class="col-1">13</div>
+          <div class="col-1">14</div> -->
+      <!-- </div>
+    </div> -->
+
+
+    <!-- Col-xl áp dụng màn >= 1200px nhỏ hơn 1200px k áp dụng -->
+    <!-- Col-lg áp dụng màn >= 992px nhỏ hơn 992px k áp dụng -->
+    <!-- Col-md áp dụng màn >= 768px nhỏ hơn 768px k áp dụng -->
+    <!-- Col-sm áp dụng màn >= 576px nhỏ hơn 576px k áp dụng -->
+    <!-- Col-sm áp dụng màn < 576px lớn hơn 576px k áp dụng -->
+    <!-- <div class="section-two">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+              Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+              Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest
+            </div>
+          </div>
+          <div class="col-xl-3  col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+              Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+              Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div> -->
+
+
+
+
+
+    <!-- <div class="section-three">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3">
+            <div class="inner-box">
+              <i class="fa-solid fa-face-smile"></i>
+              <div class="title">Dolorem est fugiat occaecati voluptate</div>
+              <div class="inner-desc">Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</div>
+            </div>
+          </div>
+          <div class="col-xl-3">
+            <div class="inner-box">
+              <i class="fa-solid fa-face-smile"></i>
+              <div class="title">Dolorem est fugiat occaecati voluptate</div>
+              <div class="inner-desc">Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</div>
+            </div>
+          </div>
+          <div class="col-xl-3">
+            <div class="inner-box">
+              <i class="fa-solid fa-face-smile"></i>
+              <div class="title">Dolorem est fugiat occaecati voluptate</div>
+              <div class="inner-desc">Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</div>
+            </div>
+          </div>
+          <div class="col-xl-3">
+            <div class="inner-box">
+              <i class="fa-solid fa-face-smile"></i>
+              <div class="title">Dolorem est fugiat occaecati voluptate</div>
+              <div class="inner-desc">Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+    <div class="section-four">
+      <div class="container">
+        <div class="inner-head">
+          <h1 class="inner-title">About Us</div>
+          <p class="inner-desc">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="inner-content">
+            Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+            Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit.
+            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.
+            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="inner-image">
+            <img src="https://bootstrapmade.com/content/demo/Green/assets/img/about.jpg" alt="logo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+<style>
+  .section-two {
+    background-color: aqua;
+    padding: 100px 0;
+  }
+  
+  .section-two  .inner-box {
+    background-color: white;
+    padding: 20px;
+    font-size: 18px;
+    color: blue;
+    margin-bottom: 30px;
+  }
+
+
+  .section-three {
+    background-color: aquamarine;
+    padding: 50px;
+  }
+
+ .section-four .row .inner-image img {
+  width: 250px;
+  height: auto;
+}
+</style>

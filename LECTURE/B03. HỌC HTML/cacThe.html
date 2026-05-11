@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cac The</title>
+</head>
+<body>
+    <!-- Thẻ Iframe -->
+    <div>
+        <pre>
+            Thẻ &lt;iframe&gt;&lt;/iframe&gt; được sử dụng để hiển thị một trang web trong một trang web.
+            Cú pháp:
+                &lt;iframe&gt;src="url" title="description" height="200" width="300"&lt;/iframe&gt;
+        </pre>
+
+        <iframe src="https://www.28tech.com.vn/" height="400" width="600"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61955337.91330687!2d86.88857310829633!3d-18.598650867975046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2b2bfd076787c5df%3A0x538267a1955b1352!2zw5pj!5e0!3m2!1svi!2sau!4v1772111712406!5m2!1svi!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+        <!-- name = target khi nhán tìm kiếm cốc cốc sẽ THAY THẾ trang bing thành trang cốc cốc  -->
+         <!-- bing 1 trang bâất kỳ -->
+        <iframe src="https://www.bing.com/" name="web_bing" width="1000" height="600"></iframe>
+        <p><a href="https://coccoc.com/search" target="web_bing">Tìm kiếm trên Cốc Cốc</a></p>
+    </div>
+
+
+    <!-- Thẻ sematic -->
+    <div>
+        <pre>
+            Semantic: Dịch ra là ngữ nghĩa. Là những thẻ có nội dung bên trong có ý nghĩa tương ứng với tên thẻ đó.
+            Một số thẻ Semantic:
+                &lt;article&gt;: Xác định nội dung độc lập, khép kín
+                &lt;aside&gt;: Xác định nội dung ngoài nội dung trang
+                &lt;details&gt;: Xác định các chi tiết bổ sung mà người dùng có thể xem hoặc ẩn
+                &lt;summary&gt;: Xác định tiêu đề hiển thị cho phần tử &lt;details&gt;
+                &lt;figcaption&gt;: Xác định chú thích cho phần tử &lt;figure&gt;
+                &lt;figure&gt;: Chỉ định nội dung độc lập, như hình minh họa, sơ đồ, ảnh, danh sách mã, v.v.
+                &lt;header&gt;: Chỉ định tiêu đề cho một tài liệu hoặc section
+                &lt;footer&gt;: Xác định chân trang cho tài liệu hoặc section
+                &lt;main&gt;: Chỉ định nội dung chính của một tài liệu
+                &lt;mark&gt;: Xác định văn bản được đánh dấu / nhấn mạnh
+                &lt;nav&gt; (navigation - dẫn đường): Xác định các liên kết điều hướng
+                &lt;section&gt;: Xác định một phần trong tài liệu
+                &lt;time&gt;: Xác định ngày / giờ
+        </pre>
+
+        <h2>HTML 4 K có SEMATIC</h2>
+        <div id="header">
+            Header
+        </div>
+        <div id="sidebar">
+            Sidebar
+        </div>
+        <div class="content">
+            <div class="post"></div>
+            <div class="post"></div>
+            <div class="post"></div>
+        </div>
+        <div id="footer"></div>
+        <h2>HTML 5 có SEMATIC</h2>
+        <header>
+            Header
+        </header>
+        <nav>
+            Sidebar
+        </nav>
+        <main>
+            <article></article>
+            <article></article>
+            <article></article>
+        </main>
+        <footer></footer>
+    </div>
+
+    <!-- Form -->
+    <div>
+        <pre>
+            <!-- action là đường dẫn gởi lên server -->
+            <!-- target -- _blank và _self là nơi hiển thị phản hồi sau khi gởi form -->
+            <!-- method GET nối data vào URL theo cặp name/value -->      <!-- method POST bảo mật k nối data vào URL  -->
+            <!-- autocomplete (ON/OFF): Tính năng tự động điền -->
+            <!-- novalidate: K cần đúng type vẫn submit đc. VD nhập email k cần @gmail.com -->
+            <form action="" target="" autocomplete="on">
+                <input name="ho_ten" />
+                <input type="submit" value="Gởi">
+            </form>
+
+            3.4. Input Types (Các kiểu của thẻ input)
+                &lt;input type="text"&gt;: Dùng để nhập text.
+                &lt;input type="email"&gt;: Dùng để nhập email.
+                &lt;input type="password"&gt;: Dùng để nhập mật khẩu.
+                &lt;input type="number"&gt;: Dùng để nhập số, không nhập được chữ cái.
+                &lt;input type="date"&gt;: Dùng để chọn: năm, tháng, ngày.
+                &lt;input type="time"&gt;: Dùng để chọn: giờ, phút, giây.
+                &lt;input type="datetime-local"&gt;: Dùng để chọn: năm, tháng, ngày, giờ, phút, giây.
+                &lt;input type="file"&gt;: Dùng để tải file lên.
+                &lt;input type="checkbox"&gt;: Các hộp kiểm cho phép người dùng chọn KHÔNG hoặc NHIỀU tùy chọn trong số các lựa chọn hạn chế.
+                &lt;input type="radio"&gt;: Các nút radio cho phép người dùng CHỈ chọn MỘT trong số các lựa chọn.
+                &lt;input type="range"&gt;: Tạo thanh trượt giá trị. Phạm vi mặc định là từ 0 đến 100. Step mặc định là 1.
+                &lt;input type="color"&gt;: Dùng để chọn màu sắc.
+
+                
+            3.5. Thuộc tính input 
+                value: chỉ định giá trị đầu vào (fix cứng giá trị)
+
+
+        </pre>
+    </div>
+</body>
+</html>
+
+<style>
+    pre {
+        white-space: pre-wrap;   /* Cho phép ngắt dòng */
+        word-wrap: break-word;   /* Ngắt từ khi cần */
+    }
+</style>

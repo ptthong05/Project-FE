@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">Box con</div>
+    </div>
+</body>
+</html>
+
+<style>
+
+    html {
+        font-size: 10px;
+    }
+
+    div.parent {
+        background-color: yellow;
+        width: 500px;
+        height: 300px;
+        font-size: 20px;
+    }
+
+    div.child {
+        background-color: aqua;
+        /* width: 50%;            so với box cha 50% của 500px */
+        /* height: 40%;           so với box cha 40% của 300px */
+        /* width: 2rem;              so với HTML 1 rem = 16px => 2 rem = 16* 2 */
+        font-size: 2rem;
+        /* width: 2em;                 so với fontsize của box cha gần nó nhất 2 * 20 */
+        /* width: 50vw;                   50% chiều rộng cửa sổ trình duyệt */
+    }
+</style>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+</head>
+<body>
+    <header>
+        Header
+    </header>
+    <div class="section-one">
+        <div class="content">Content</div>
+        <div class="aside">Aside</div>
+        <div class="clear-both"></div>
+    </div>
+    <div class="section-two">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="clear-both"></div>
+    </div>
+    <footer>Footer</footer>
+</body>
+</html>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        /* margin-left: 70px;
+        margin-right: 70px; */
+    }
+
+    header {
+        background-color: #92DFC8;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .content {
+        background-color: #CAEFF2;
+        padding: 20px;
+        height: 150px;
+        float: left;
+        width: 70%;
+    }
+
+    .aside {
+        background-color: #F2D8CA;
+        padding: 20px;
+        height: 150px;
+        float: right;
+        width: 30%;
+    }
+
+    /* K bị co lên chiếm chỗ */
+    .clear-both {
+        clear: both;
+    } 
+
+    .box {
+        background-color: #F2D8CA;
+        padding: 20px;
+        height: 50px;
+        margin-top: 5px;
+        margin-right: 10px;                    /* 3 * 10 = 30px */
+        float: left;
+        width: calc(25% - 7.5px);             /* 30 / 4 = 7.5 trừ đi 7.5 mỗi box */
+        text-align: center;
+    }
+    /* Css box 4 */
+    div.box:nth-child(4) {
+        margin-right: 0;
+    }
+
+    footer {
+        background-color: #EECBF3;
+        padding: 20px;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .content, .aside {
+            width: 100%;
+            float: none;
+        }
+
+        .box {
+            margin-right: 10px;
+            margin-top: 10px;
+            float: left;
+            width: calc(50% - 10px);          
+        }
+        .box:nth-child(2) {
+            margin-right: 0;
+        }
+        .box:nth-child(4) {
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .box {
+            margin-right: 0;
+            margin-top: 10px;
+            float: none;
+            width: 100%;
+        }
+    }
+</style>
